@@ -10,7 +10,7 @@ import { Navbar } from "./components/Navbar";
 function App() {
   return (
     <>
-      <header>
+      <header className="bg-transparent absolute top-0 left-0 w-full z-10">
         <Navbar />
       </header>
 

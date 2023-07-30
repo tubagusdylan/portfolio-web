@@ -50,7 +50,7 @@ export const Navbar = () => {
               </li>
             </ul>
             <div className="w-full md:hidden my-1">
-              <Button>Download CV</Button>
+              <Button width={"100%"}>Download CV</Button>
             </div>
           </nav>
         </div>
