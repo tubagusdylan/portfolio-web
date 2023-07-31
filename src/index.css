@@ -21,3 +21,7 @@ body {
 .hamburger-active > span:nth-child(2) {
   @apply scale-0;
 }
+
+.active {
+  @apply underline underline-offset-8 text-secondary;
+}
