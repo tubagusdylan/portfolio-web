@@ -1,23 +1,16 @@
-import { Button } from "../components/Button";
-import ilustrasi from "../img/ilustrasi.png";
-import gambar from "../img/image.png";
+import { Ornament } from "../components/Ornament";
 
 export const Home = () => {
   return (
-    <section className="pt-36">
+    <section className="pt-44 h-[100vh]">
+      <Ornament />
       <div className="container xl:px-36">
-        <div className="flex flex-wrap border border-red-500 justify-center items-center">
-          <div className="w-full lg:w-1/2">
-            <span>Welcome!, i am</span>
-            <h1>Tubagus Dylan</h1>
-            <span>IoT & Web Development Enthusiast</span>
-            <p>I am a final year Electrical Engineering Student at University of Indonesia. In the last few months, I have more interest in IoT (Internet of Things) which have a strong relationship with web development. </p>
-            <Button>Contact Me</Button>
-          </div>
-          <div className="w-full lg:w-1/2">
-            <img src={ilustrasi} alt="gambar" width={500} className="lg:hidden" />
-            <img src={gambar} alt="gambar" width={300} className="hidden lg:block mx-auto" />
-          </div>
+        <div className="w-full lg:w-[600px] mx-auto text-center">
+          <span className="font-semibold mb-4 block text-lg">Hello, I am</span>
+          <h1 className="font-bold text-2xl text-primary mb-2 lg:text-4xl">Tubagus Dylan</h1>
+          <span className="block text-4xl font-bold text-secondary mb-6 lg:text-6xl">IoT Enthusiast</span>
+          <p className="mb-6 text-lg lg:text-xl text-tertiary opacity-75">I am an Electrical Engineering with 2 Years experience of hardware IoT development and 1 years of frontend development.</p>
+          <div className="flex w-full justify-between items-center"></div>
         </div>
       </div>
     </section>
