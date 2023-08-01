@@ -1,5 +1,5 @@
 import { Ornament } from "../components/Ornament";
-import { FaInstagram, FaLinkedin, FaGithub, FaTiktok } from "react-icons/fa6";
+import { Sosmed } from "../components/Sosmed";
 
 export const Home = () => {
   return (
@@ -12,26 +12,7 @@ export const Home = () => {
           <h1 className="block text-4xl font-bold text-secondary mb-6 lg:text-6xl">IoT Enthusiast</h1>
           <p className="mb-6 text-lg lg:text-xl text-tertiary opacity-75">I am an Electrical Engineering Student with 2 Years experience of hardware IoT Development and 1 years of Frontend Development.</p>
           <div className="flex w-[70%] md:w-[55%] lg:w-1/2 justify-between items-center mx-auto mt-14">
-            <div className="bg-white shadow-md p-2 rounded-full hover:-translate-y-2 transition ease-in-out duration-500">
-              <a href="#" target="_blank">
-                <FaInstagram size={30} className="text-tertiary" />
-              </a>
-            </div>
-            <div className="bg-white shadow-md p-2 rounded-full hover:-translate-y-2 transition ease-in-out duration-500">
-              <a href="#" target="_blank">
-                <FaLinkedin size={30} className="text-tertiary" />
-              </a>
-            </div>
-            <div className="bg-white shadow-md p-2 rounded-full hover:-translate-y-2 transition ease-in-out duration-500">
-              <a href="#" target="_blank">
-                <FaGithub size={30} className="text-tertiary" />
-              </a>
-            </div>
-            <div className="bg-white shadow-md p-2 rounded-full hover:-translate-y-2 transition ease-in-out duration-500">
-              <a href="#" target="_blank">
-                <FaTiktok size={30} className="text-tertiary" />
-              </a>
-            </div>
+            <Sosmed />
           </div>
         </div>
       </div>

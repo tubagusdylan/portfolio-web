@@ -34,7 +34,7 @@ export const Skill = () => {
               <SkillWrap source={python}>Python</SkillWrap>
               <SkillWrap source={nodejs}>Node JS</SkillWrap>
               <SkillWrap source={react}>React JS</SkillWrap>
-              <SkillWrap source={tailwind}>TailwindCSS</SkillWrap>
+              <SkillWrap source={tailwind}>Tailwind</SkillWrap>
               <SkillWrap source={boostrap}>Bootstrap</SkillWrap>
             </div>
           </div>
