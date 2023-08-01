@@ -1,6 +1,16 @@
 import esp from "../icons/esp.svg";
 import arduino from "../icons/arduino.svg";
 import easyeda from "../icons/easyeda.png";
+import c from "../icons/c.svg";
+import cpp from "../icons/cpp.svg";
+import js from "../icons/js.svg";
+import nodejs from "../icons/nodejs.svg";
+import python from "../icons/python.svg";
+import react from "../icons/react.svg";
+import tailwind from "../icons/tailwind.svg";
+import boostrap from "../icons/bootstrap.svg";
+
+import { SkillWrap } from "./SkillWrap";
 
 export const Skill = () => {
   return (
@@ -10,22 +20,23 @@ export const Skill = () => {
           <div className="w-full lg:w-1/2 mb-10">
             <h1 className="text-2xl font-bold tracking-wider mb-4">Hardware Skills</h1>
             <div className="flex flex-wrap gap-4">
-              <div className="p-3 shadow-md rounded-lg bg-slate-600 w-1/5 hover:translate-y-3 transition ease-in-out duration-300">
-                <img src={esp} alt="eps32" width={45} className="mx-auto" />
-                <span className="block pt-2 text-center">ESP32</span>
-              </div>
-              <div className="p-3 shadow-md rounded-lg bg-slate-600 w-1/5 hover:translate-y-3 transition ease-in-out duration-300">
-                <img src={arduino} alt="arduino" width={45} className="mx-auto" />
-                <span className="block pt-2 text-center">Arduino</span>
-              </div>
-              <div className="p-3 shadow-md rounded-lg bg-slate-600 w-1/5 hover:translate-y-3 transition ease-in-out duration-300">
-                <img src={easyeda} alt="easyeda" width={45} className="mx-auto" />
-                <span className="block pt-2 text-center">EasyEda</span>
-              </div>
+              <SkillWrap source={esp}>ESP32</SkillWrap>
+              <SkillWrap source={arduino}>Arduino</SkillWrap>
+              <SkillWrap source={easyeda}>EasyEda</SkillWrap>
             </div>
           </div>
           <div className="w-full lg:w-1/2">
             <h1 className="text-2xl font-bold tracking-wider mb-4">Programming Skills</h1>
+            <div className="flex flex-wrap gap-4">
+              <SkillWrap source={c}>C</SkillWrap>
+              <SkillWrap source={cpp}>C++</SkillWrap>
+              <SkillWrap source={js}>JS</SkillWrap>
+              <SkillWrap source={python}>Python</SkillWrap>
+              <SkillWrap source={nodejs}>Node JS</SkillWrap>
+              <SkillWrap source={react}>React JS</SkillWrap>
+              <SkillWrap source={tailwind}>TailwindCSS</SkillWrap>
+              <SkillWrap source={boostrap}>Bootstrap</SkillWrap>
+            </div>
           </div>
         </div>
       </div>
