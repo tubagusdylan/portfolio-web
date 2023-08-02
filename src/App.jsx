@@ -1,16 +1,28 @@
 /* eslint-disable no-unused-vars */
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Projects } from "./pages/Projects";
-import { Services } from "./pages/Services";
 import { Contact } from "./pages/Contact";
 import { Navbar } from "./components/Navbar";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [navFixed, setNavFixed] = useState("");
+
+  useEffect(() => {
+    handleNav();
+  }, []);
+
+  function handleNav() {
+    window.onscroll = () => {
+      window.scrollY > 20 ? setNavFixed("navbar-fixed") : setNavFixed("");
+    };
+  }
+
   return (
     <>
-      <header className="bg-transparent absolute top-0 left-0 w-full z-10">
+      <header className={`bg-transparent absolute top-0 left-0 w-full z-10 ${navFixed}`}>
         <Navbar />
       </header>
 
@@ -18,7 +30,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
