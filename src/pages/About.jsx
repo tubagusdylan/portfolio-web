@@ -1,6 +1,29 @@
 import { Button } from "../components/Button";
 import foto from "../img/foto.png";
 import { Skill } from "../components/Skill";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: {
+    opacity: 0,
+    x: "-30vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
+const container2 = {
+  hidden: {
+    opacity: 0,
+    x: "30vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+};
 
 export const About = () => {
   return (
@@ -8,15 +31,15 @@ export const About = () => {
       <section className="lg:pt-36 pt-16">
         <div className="container xl:px-44">
           <div className="flex flex-wrap mb-20">
-            <div className="w-full mb-10 lg:w-1/2 pt-16">
+            <motion.div className="w-full mb-10 lg:w-1/2 pt-16" variants={container} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
               <h3 className="font-semibold text-secondary mb-1 lg:text-lg">TENTANG SAYA</h3>
               <h1 className="font-bold text-3xl mb-4 text-primary">Seorang Pembelajar</h1>
               <p className="text-tertiary opacity-80 text-base mb-6 xl:mb-12 ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ullam dolores, rem repellendus ipsam deserunt deleniti eveniet esse natus distinctio mollitia, hic ad reprehenderit. Vel nam aperiam quibusdam modi ratione?
               </p>
               <Button>Services</Button>
-            </div>
-            <div className="w-full lg:w-1/2 xl:pl-40">
+            </motion.div>
+            <motion.div className="w-full lg:w-1/2 xl:pl-40" variants={container2} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
               <div className="relative">
                 <img src={foto} alt="foto" className="w-[250px] mx-auto" />
                 <span className="absolute -top-16 -left-10 -z-10">
@@ -29,7 +52,7 @@ export const About = () => {
                   </svg>
                 </span>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
