@@ -1,6 +1,9 @@
 import { Form } from "../components/Form";
+import { PopUp } from "../components/popUp";
 import { Sosmed } from "../components/Sosmed";
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const container = {
   hidden: {
@@ -25,6 +28,39 @@ const container2 = {
 };
 
 export const Contact = () => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isFail, setIsFail] = useState(false);
+
+  const form = useRef(null);
+
+  const handleClose = () => {
+    setIsSuccess(false);
+    setIsFail(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("service_jwjj0gs", "template_uq8j98r", form.current, "RfglJCLwIO1fIDrEH").then(
+      (result) => {
+        setUsername("");
+        setEmail("");
+        setMessage("");
+        setIsSuccess(true);
+        setIsFail(false);
+        console.log(result.text);
+      },
+      (error) => {
+        setIsSuccess(false);
+        setIsFail(true);
+        console.log(error.text);
+      }
+    );
+  };
+
   return (
     <section className="pt-16 lg:pt-32 mb-12">
       <div className="container xl:px-44">
@@ -36,8 +72,27 @@ export const Contact = () => {
               <Sosmed />
             </div>
           </motion.div>
-          <motion.div className="w-full lg:w-1/2" variants={container2} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
-            <Form />
+          <motion.div className="w-full lg:w-1/2 relative" variants={container2} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
+            {isSuccess && (
+              <PopUp background={"bg-teal-300"} color={"text-teal-700"} closePopUp={handleClose}>
+                Success
+              </PopUp>
+            )}
+            {isFail && (
+              <PopUp background={"bg-pink-300"} color={"text-pink-700"} closePopUp={handleClose}>
+                Success
+              </PopUp>
+            )}
+            <Form
+              submit={handleSubmit}
+              refForm={form}
+              username={username}
+              email={email}
+              message={message}
+              onNameChange={(e) => setUsername(e.target.value)}
+              onEmailChange={(e) => setEmail(e.target.value)}
+              onMessageChange={(e) => setMessage(e.target.value)}
+            />
           </motion.div>
         </div>
       </div>
