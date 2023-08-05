@@ -76,7 +76,7 @@ export const Contact = () => {
             )}
             {status === "fail" && (
               <PopUp background={"bg-pink-300"} color={"text-pink-700"} closePopUp={handleClose}>
-                Success
+                Fail, send again!
               </PopUp>
             )}
             <Form

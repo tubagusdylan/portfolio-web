@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Button } from "./Button";
+import { ButtonSubmit } from "./ButtonSubmit";
 import { ClipLoader } from "react-spinners";
 
 export const Form = (props) => {
@@ -48,10 +48,10 @@ export const Form = (props) => {
             placeholder="Enter your message"
           />
         </label>
-        <Button width={"100%"} status={status}>
-          <ClipLoader size={15} color="#F77F4B" className="mr-2" loading={status === "submitting"} />
+        <ButtonSubmit width={"100%"} status={status}>
+          <ClipLoader size={15} color="#fff" className="mr-2" loading={status === "submitting"} />
           Send
-        </Button>
+        </ButtonSubmit>
       </form>
     </>
   );
