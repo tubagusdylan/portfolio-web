@@ -40,9 +40,9 @@ export const About = () => {
               <Button>Services</Button>
             </motion.div>
             <motion.div className="w-full lg:w-1/2 xl:pl-40" variants={container2} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
-              <div className="relative">
+              <div className="relative w-full">
                 <img src={foto} alt="foto" className="w-[250px] mx-auto" />
-                <span className="absolute -top-16 -left-10 -z-10">
+                <span className="absolute -top-20 left-1/2  scale-75 lg:scale-100 -translate-x-1/2 -z-10">
                   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={500}>
                     <path
                       fill="#F77F4B"
