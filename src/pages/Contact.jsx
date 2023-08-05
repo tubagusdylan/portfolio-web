@@ -31,31 +31,27 @@ export const Contact = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [isFail, setIsFail] = useState(false);
+  const [status, setStatus] = useState("typing");
 
   const form = useRef(null);
 
   const handleClose = () => {
-    setIsSuccess(false);
-    setIsFail(false);
+    setStatus("typing");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setStatus("submitting");
     emailjs.sendForm("service_jwjj0gs", "template_uq8j98r", form.current, "RfglJCLwIO1fIDrEH").then(
       (result) => {
         setUsername("");
         setEmail("");
         setMessage("");
-        setIsSuccess(true);
-        setIsFail(false);
+        setStatus("success");
         console.log(result.text);
       },
       (error) => {
-        setIsSuccess(false);
-        setIsFail(true);
+        setStatus("fail");
         console.log(error.text);
       }
     );
@@ -73,12 +69,12 @@ export const Contact = () => {
             </div>
           </motion.div>
           <motion.div className="w-full lg:w-1/2 relative" variants={container2} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
-            {isSuccess && (
+            {status === "success" && (
               <PopUp background={"bg-teal-300"} color={"text-teal-700"} closePopUp={handleClose}>
                 Success
               </PopUp>
             )}
-            {isFail && (
+            {status === "fail" && (
               <PopUp background={"bg-pink-300"} color={"text-pink-700"} closePopUp={handleClose}>
                 Success
               </PopUp>
@@ -92,6 +88,7 @@ export const Contact = () => {
               onNameChange={(e) => setUsername(e.target.value)}
               onEmailChange={(e) => setEmail(e.target.value)}
               onMessageChange={(e) => setMessage(e.target.value)}
+              status={status}
             />
           </motion.div>
         </div>
