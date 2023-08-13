@@ -2,6 +2,7 @@ import { ProjectWrap } from "../components/ProjectWrap";
 import { motion } from "framer-motion";
 import project1 from "../img/project1.png";
 import project2 from "../img/project2.png";
+import project3 from "../img/project3.png";
 import hardware_1 from "../img/hardware_1.png";
 import hardware_2 from "../img/hardware_2.png";
 
@@ -35,12 +36,15 @@ export const Projects = () => {
           My Latest Project
         </motion.h1>
         <h2 className="text-secondary font-semibold text-lg xl:pl-32">Web</h2>
-        <motion.div className="w-full xl:w-10/12 xl:mx-auto gap-3 lg:gap-0 flex flex-wrap mb-10 justify-center items-center" variants={container} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
-          <ProjectWrap source={project1} title={"Web portfolio"} href={"https://tubagusdylan.github.io/portfolio-tailwindcss/"}>
-            A frontend training project that built with tailwindcss technology
+        <motion.div className="w-full xl:w-10/12 xl:mx-auto gap-3 lg:gap-0 flex flex-wrap mb-10 items-center" variants={container} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
+          <ProjectWrap source={project3} title={"Authentication Page"} href={"https://github.com/tubagusdylan/jwt-auth"}>
+            An authentication page, built with React JS, Express JS, and MySQL databases.
           </ProjectWrap>
           <ProjectWrap source={project2} title={"Quiz App"} href={"https://quiz-app-v1-reactjs.vercel.app/"}>
             A quiz app which implement API from opentdb.com. Built with React JS technology
+          </ProjectWrap>
+          <ProjectWrap source={project1} title={"Web portfolio"} href={"https://tubagusdylan.github.io/portfolio-tailwindcss/"}>
+            A frontend training project that built with tailwindcss technology
           </ProjectWrap>
         </motion.div>
         <h2 className="text-secondary font-semibold text-lg xl:pl-32">Hardware</h2>
