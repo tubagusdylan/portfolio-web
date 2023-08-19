@@ -32,10 +32,14 @@ export const About = () => {
         <div className="container xl:px-44">
           <div className="flex flex-wrap mb-20">
             <motion.div className="w-full mb-10 lg:w-1/2 pt-16" variants={container} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
-              <h3 className="font-semibold text-secondary mb-1 lg:text-lg">TENTANG SAYA</h3>
-              <h1 className="font-bold text-3xl mb-4 text-primary">Seorang Pembelajar</h1>
+              <div className="w-16 bg-secondary h-1 rounded-sm mb-4"></div>
+              <h1 className="font-bold text-3xl mb-4 text-primary">About Me</h1>
               <p className="text-tertiary opacity-80 text-base mb-6 xl:mb-12 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ullam dolores, rem repellendus ipsam deserunt deleniti eveniet esse natus distinctio mollitia, hic ad reprehenderit. Vel nam aperiam quibusdam modi ratione?
+                Hello there! I am passionate about the dynamic world of technology, with a particular focus on web development and the exciting realm of the Internet of Things (IoT). Why am I interested in these two fields?
+                <br />
+                <br />
+                In the world of electrical engineering, I am often faced with collecting data from sensors and displaying it in a web or mobile application. However, the available platforms have limited visualization styles and are
+                difficult to set up, so I also studied web knowledge to achieve my wish.
               </p>
               <Button>Services</Button>
             </motion.div>

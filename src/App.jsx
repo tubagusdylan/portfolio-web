@@ -16,7 +16,7 @@ function App() {
 
   function handleNav() {
     window.onscroll = () => {
-      window.scrollY > 20 ? setNavFixed("navbar-fixed") : setNavFixed("");
+      window.scrollY > 0 ? setNavFixed("navbar-fixed") : setNavFixed("");
     };
   }
 

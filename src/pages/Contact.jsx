@@ -4,6 +4,7 @@ import { Sosmed } from "../components/Sosmed";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { SiGmail, SiWhatsapp } from "react-icons/si";
 
 const container = {
   hidden: {
@@ -66,6 +67,16 @@ export const Contact = () => {
             <h3 className="font-semibold text-2xl text-primary">We are looking forward to start a project with you</h3>
             <div className="flex mt-6 gap-6">
               <Sosmed />
+            </div>
+            <div className="mt-10 ml-2">
+              <div className="mb-6">
+                <SiGmail size={30} className="text-tertiary mr-6 inline-block" />
+                <span className="text-base text-tertiary">tubagus.dylanr@gmail.com</span>
+              </div>
+              <div className="mb-4">
+                <SiWhatsapp size={30} className="text-tertiary mr-6 inline-block" />
+                <span className="text-base text-tertiary">+6289690757403</span>
+              </div>
             </div>
           </motion.div>
           <motion.div className="w-full lg:w-1/2 relative" variants={container2} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>

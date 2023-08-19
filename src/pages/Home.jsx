@@ -35,7 +35,7 @@ export const Home = () => {
           <h1 className="block text-4xl font-bold text-secondary mb-6 lg:text-6xl">IoT Enthusiast</h1>
           <p className="mb-6 text-lg lg:text-xl text-tertiary opacity-75">I am an Electrical Engineering Student with 2 Years experience of hardware IoT Development and 1 years of Frontend Development.</p>
         </motion.div>
-        <motion.div className="w-full lg:w-[600px] mx-auto text-center" variants={icon} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
+        <motion.div className="w-full lg:w-[600px] mx-auto" variants={icon} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
           <div className="flex w-[70%] md:w-[55%] lg:w-1/2 justify-between items-center mx-auto mt-14">
             <Sosmed />
           </div>
