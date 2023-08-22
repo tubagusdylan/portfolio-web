@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import project1 from "../img/project1.png";
 import project2 from "../img/project2.png";
 import project3 from "../img/project3.png";
+import project4 from "../img/project4.png";
 import hardware_1 from "../img/hardware_1.png";
 import hardware_2 from "../img/hardware_2.png";
 
@@ -37,7 +38,10 @@ export const Projects = () => {
         </motion.h1>
         <h2 className="text-secondary font-semibold text-lg xl:pl-32">Web</h2>
         <motion.div className="w-full xl:w-10/12 xl:mx-auto gap-3 lg:gap-0 flex flex-wrap mb-10 items-center" variants={container} initial="hidden" animate="visible" transition={{ type: "spring", duration: 2 }}>
-          <ProjectWrap source={project1} title={"Shopping List App"} href={"https://tubagusdylan.github.io/portfolio-tailwindcss/"}>
+          <ProjectWrap source={project4} title={"Product Catalog"} href={"https://ecommerce-catalog-opal.vercel.app/"}>
+            A simple product catalog which implement API from fakestoreapi. Built with Vue JS
+          </ProjectWrap>
+          <ProjectWrap source={project1} title={"Shopping List App"} href={"https://daftar-belanja-app.vercel.app/"}>
             A simple shopping list app that implement CRUD. Built with Vue JS.
           </ProjectWrap>
           <ProjectWrap source={project3} title={"Authentication Page"} href={"https://github.com/tubagusdylan/jwt-auth"}>

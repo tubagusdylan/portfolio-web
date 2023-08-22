@@ -6,7 +6,7 @@ export const ProjectWrap = ({ source, title, children, href }) => {
         <a href={href} target="_blank" rel="noreferrer">
           <img src={source} alt="project-1" className="aspect-video" />
         </a>
-        <div className="my-3 p-4">
+        <div className="my-3 p-4 h-32 overflow-hidden">
           <h2 className="font-bold text-lg text-secondary mb-2">{title}</h2>
           <p className="text-base text-primary">{children}</p>
         </div>
