@@ -1,5 +1,5 @@
 import { Form } from "../components/Form";
-import { PopUp } from "../components/popUp";
+import { PopUp } from "../components/PopUp";
 import { Sosmed } from "../components/Sosmed";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
